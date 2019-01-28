@@ -7,15 +7,15 @@
   <body>
     <header class="catalog-header">
         <nav class="catalog-navigation">
-          <a class="catalog-header-logo">
-            <img src="img/index-logo.svc" width="200" height="130" 
-            alt="Логотип барбершопа "Бородинский">
+          <a class="catalog-header-logo" href="index.html">
+            <img src="img/index-logo-catalog.svc" width="200" height="130" 
+            alt="Логотип барбершопа Бородинский">
           </a>
           <ul class="site-navigation">
             <li><a href="info.html">Информация</a></li>
             <li><a href="news.html">Новости</a></li>
             <li><a href="price.html">Прайс-лист</a></li>
-            <li><a href="shop.html">Магазин</a></li>
+            <li class="site-navigation-current"><a href="shop.html">Магазин</a></li>
             <li><a href="contacts.html">Контакты</a></li> 
           </ul>
           <ul class="user-navigation">
@@ -24,46 +24,47 @@
         </nav>
       </header>
       <main>
-        <nav class="catalog-navigation">
-            <h1>Средства для ухода</h1>
-            <ul>
-              <li><a href="main-barbershop.html">Главная</a></li>
+            <h1 class="page-title">Средства для ухода</h1>
+
+            <ul class="breadcrumbs">
+              <li><a href="index.html">Главная</a></li>
               <li><a href="shop-barbershop.html">Магазин</a></li>
-              <li><a href="catalog.html">Средства для ухода</a></li>
+              <li class="breadcrumbs-current"><a href="catalog.html">Средства для ухода</a></li>
             </ul>
-        </nav>
         <section class="manufactures">
-          <h2>Производители:</h2>
+          <h2 class="visually-hidden">Фильтр товаров</h2>
+          <h3>Производители:</h3>
           <label class="manufactures-item">
-             <input type="radio" name="boc" value="boc"><h3>baxter of california</h3>
+             <input type="radio" name="boc" value="boc"><h4>baxter of california</h4>
           </label>
           <label class="manufactures-item">
-             <input type="radio" name="natty" value="natty"><h3>Mr Natty</h3>
+             <input type="radio" name="natty" value="natty"><h4>Mr Natty</h4>
           </label>
           <label class="manufactures-item">
-              <input type="radio" name="suavecito" value="suavecito"><h3>Suavecito</h3>
+              <input type="radio" name="suavecito" value="suavecito"><h4>Suavecito</h4>
            </label>
            <label class="manufactures-item">
-              <input type="radio" name="mg" value="mg"><h3>Melin+Goetz</h3>
+              <input type="radio" name="mg" value="mg"><h4>Melin+Goetz</h4>
            </label>
            <label class="manufactures-item">
-              <input type="radio" name="murray" value="murray"><h3>Murray's</h3>
+              <input type="radio" name="murray" value="murray"><h4>Murray's</h4>
            </label>
            <label class="manufactures-item">
-              <input type="radio" name="ac" value="ac"><h3>American Crew</h3>
+              <input type="radio" name="ac" value="ac"><h4>American Crew</h4>
            </label>
         </section>
         <section class="product-group">
-           <h2>Группы товаров:</h2>
+           <h3>Группы товаров:</h3>
             <label class="product-group-item">
-              <input type="radio" name="razor" value="razor"><h3>Бритвенные принадлежности</h3>
+              <input type="radio" name="razor" value="razor"><h4>Бритвенные принадлежности</h4>
             </label> 
             <label class="product-group-item">
-              <input type="radio" name="care" value="care"><h3>Средства для ухода</h3>
+              <input type="radio" name="care" value="care"><h4>Средства для ухода</h4>
             </label> 
             <label class="product-group-item">
-              <input type="radio" name="accessory" value="accessory"><h3>Аксессуары</h3>
+              <input type="radio" name="accessory" value="accessory"><h4>Аксессуары</h4>
             </label> 
         </section>
+
       </main>
   </body>
