@@ -33,37 +33,42 @@
             </ul>
         <section class="manufactures">
           <h2 class="visually-hidden">Фильтр товаров</h2>
-          <h3>Производители:</h3>
-          <label class="manufactures-item">
-             <input type="radio" name="boc" value="boc"><h4>baxter of california</h4>
-          </label>
-          <label class="manufactures-item">
-             <input type="radio" name="natty" value="natty"><h4>Mr Natty</h4>
-          </label>
-          <label class="manufactures-item">
-              <input type="radio" name="suavecito" value="suavecito"><h4>Suavecito</h4>
-           </label>
-           <label class="manufactures-item">
-              <input type="radio" name="mg" value="mg"><h4>Melin+Goetz</h4>
-           </label>
-           <label class="manufactures-item">
-              <input type="radio" name="murray" value="murray"><h4>Murray's</h4>
-           </label>
-           <label class="manufactures-item">
-              <input type="radio" name="ac" value="ac"><h4>American Crew</h4>
-           </label>
-        </section>
-        <section class="product-group">
-           <h3>Группы товаров:</h3>
-            <label class="product-group-item">
-              <input type="radio" name="razor" value="razor"><h4>Бритвенные принадлежности</h4>
-            </label> 
-            <label class="product-group-item">
-              <input type="radio" name="care" value="care"><h4>Средства для ухода</h4>
-            </label> 
-            <label class="product-group-item">
-              <input type="radio" name="accessory" value="accessory"><h4>Аксессуары</h4>
-            </label> 
+          <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+            <fieldset>
+                <legend>Производители:</legend>
+                    <label class="manufactures-item">
+                        <input type="radio" name="boc" value="boc" checked><h4>baxter of california</h4>
+                    </label>
+                    <label class="manufactures-item">
+                        <input type="radio" name="natty" value="natty"><h4>Mr Natty</h4>
+                    </label>
+                    <label class="manufactures-item">
+                        <input type="radio" name="suavecito" value="suavecito" checked><h4>Suavecito</h4>
+                    </label>
+                    <label class="manufactures-item">
+                        <input type="radio" name="mg" value="mg"><h4>Melin+Goetz</h4>
+                    </label>
+                    <label class="manufactures-item">
+                        <input type="radio" name="murray" value="murray"><h4>Murray's</h4>
+                    </label>
+                    <label class="manufactures-item">
+                        <input type="radio" name="ac" value="ac" checked><h4>American Crew</h4>
+                    </label>
+            </fieldset>
+            <fieldset>
+                <legend>Группы товаров:</legend>
+                    <label class="product-group-item">
+                        <input type="radio" name="product" value="razor"><h4>Бритвенные принадлежности</h4>
+                    </label> 
+                    <label class="product-group-item">
+                        <input type="radio" name="product" value="care" checked><h4>Средства для ухода</h4>
+                    </label> 
+                    <label class="product-group-item">
+                        <input type="radio" name="product" value="accessory"><h4>Аксессуары</h4>
+                    </label> 
+            </fieldset>
+            <button type="submit" class="filter-button button">Показать</button>
+            </form>
         </section>
         <section class="catalog">
            <h2 class="visually-hidden">Список средств для ухода</h2>
