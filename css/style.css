@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+
+    /* Свойства параметров шрифта*/
+    font-family: "PT Sans Narrow", Arial, sans-serif; /*подбираем преобладающий шрифт на страницах*/
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    text-transform: uppercase; 
+
+    /*Фон*/
+    background-color: #000000;
+    background-image: url("img/bg.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+    /*Описываем глобальные стили*/
+a {
+    text-decoration: none; 
+}
+
+    /*Идем по блокам*/
+.main-navigation {
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+
+    background-color: #000000;
+}
+
+.site-navigation,
+.user-navigation {
+    /*Убираем маркеры из списков*/
+    list-style: none;
+}
+
+.site-navigation a, 
+.user-navigation a {
+    /*Устанавливаем цвет ссылок*/
+    color: #ffffff;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+    background-color: #242424
+}
