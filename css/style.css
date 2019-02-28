@@ -48,3 +48,8 @@ a {
 .user-navigation a:focus {
     background-color: #242424
 }
+
+.feature-list {
+    /*Убираем маркеры из списков*/
+    list-style: none; 
+}
