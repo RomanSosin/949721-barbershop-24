@@ -49,7 +49,26 @@ a {
     background-color: #242424
 }
 
-.feature-list {
+.features-list {
     /*Убираем маркеры из списков*/
     list-style: none; 
+}
+
+.features-item {
+    text-align: center;
+}
+
+.features-item h3 {
+    font-size: 30px;
+    line-height: 42px;
+}
+
+    /*Оформляем общий раздел*/
+.index-columns {
+    color: #000000;
+
+    background-color: faf7f4;
+    background-image: url("img/bg-light.jpg");
+    background-position: 0 0;
+    background-repeat: repeat;
 }
