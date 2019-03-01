@@ -162,6 +162,8 @@ a {
 
 .footer-copyright .button:hover,
 .footer-copyright .button:focus {
-    color: #ffffff;
+    color: #000000;
+    
+    background-color: #ffffff
 }
 
