@@ -120,3 +120,48 @@ a {
 .appointment-item input:focus {
     border-color: #663d15;
 }
+
+.main-footer {
+    color: #ffffff;
+
+    background-color: #000000;
+    background-image: url("img/bg-dark.jpg");
+    background-position: 0 0;
+    background-repeat: repeat;
+}
+
+.footer-contacts{
+    font: inherit;
+}
+
+.footer-contacts a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+    text-decoration: none;
+}
+
+.footer-social {
+    text-align: center;
+}
+
+.footer-social ul {
+    list-style: none;
+}
+
+.social-button {
+    color: #ffffff; 
+}
+
+.footer-copyright {
+    text-align: center;
+}
+
+.footer-copyright .button:hover,
+.footer-copyright .button:focus {
+    color: #ffffff;
+}
+
