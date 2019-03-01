@@ -167,3 +167,13 @@ a {
     background-color: #ffffff
 }
 
+    /*Стилизация поля "login"*/
+.modal-login {
+    color: #000000;
+
+    ackground-color: faf7f4;
+    background-image: url("img/bg-light.jpg");
+    background-position: 0 0;
+    background-repeat: repeat;
+
+}
