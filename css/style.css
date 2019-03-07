@@ -225,3 +225,9 @@ a {
 .restore:focus {
     text-decoration: none;
 }
+
+/*Стилизауем CATALOG*/
+
+a {
+    text-decoration: none;
+}
