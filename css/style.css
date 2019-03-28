@@ -231,3 +231,17 @@ a {
 a {
     text-decoration: none;
 }
+
+/*---Сеточные Стили---*/
+
+body {
+    min-width: 1122px;
+    min-height: 1750px;
+}
+
+body {
+    /*---Временно для сетки---*/
+    background-image: url("img/barbershop-index.jpg");
+    background-size: 1372px auto;
+    bacground-repeat: no-repeat;
+}
