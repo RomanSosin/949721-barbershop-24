@@ -243,5 +243,56 @@ body {
     /*---Временно для сетки---*/
     background-image: url("img/barbershop-index.jpg");
     background-size: 1372px auto;
-    bacground-repeat: no-repeat;
+    background-repeat: no-repeat;
+}
+
+.main-hearder {
+    margin-bottom: 75px; 
+
+    /* Временно для сетки */ 
+    min-height: 285px;
+}
+
+.main-navigation {
+    display: flex; 
+    flex-direction: column;
+    /* центруем по cross axis */
+    align-items: center;
+
+    /* Временно для сетки */
+    min-height: 285px;
+    background-color: transparent; 
+}
+
+.main-header-logo {
+    width: 368px;
+    height: 153px;
+    /* Переносим логотип под навигацию*/
+    order: 2; 
+
+    /* Временно для сетки */
+    border: 2px dotted red; 
+}
+
+.site-navigation {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    /* Временно для сетки */
+    min-height: 70px;
+    border: 2px dotted red;
+}
+
+.user-navigation {
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+
+    /* Временно для сетки */
+    min-height: 70px;
+    border: 2px dotted red;
+
 }
