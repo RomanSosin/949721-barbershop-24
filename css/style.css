@@ -296,3 +296,42 @@ body {
     border: 2px dotted red;
 
 }
+
+.main-navigation-style {
+    width: 100%;
+    margin-bottom: 60px;
+
+    background-color: #000000;
+}
+
+ .container {
+    /* Задамем центровку контейнера*/ 
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+
+/* Временно для сетки */
+border: 2px dotted red;
+}
+
+.main-navigation-style .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.features-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0px;
+
+    list-style: none;
+}
+
+.feature-item {
+    width: 300px;
+}
+
+.features {
+    margin-bottom: 80px;
+}
