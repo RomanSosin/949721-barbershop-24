@@ -232,7 +232,7 @@ a {
     text-decoration: none;
 }
 
-/*---Сеточные Стили---*/
+                                    /*---Сеточные Стили---*/
 
 body {
     min-width: 1122px;
@@ -240,23 +240,34 @@ body {
 }
 
 body {
-    /*---Временно для сетки---*/
-    background-image: url("img/barbershop-index.jpg");
-    background-size: 1372px auto;
+    /*---Временно для сетки-
+    background-image: url("img/barbershop-index_1.jpg");
+    --*/
+    background-size: 2560px auto;
     background-repeat: no-repeat;
 }
+.container {
+    /* Задамем центровку контейнера*/ 
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
 
-.main-hearder {
+/* Временно для сетки */
+border: 2px dotted red;
+}
+
+.main-header {
     margin-bottom: 75px; 
 
     /* Временно для сетки */ 
     min-height: 285px;
+     border: 2px dotted white 
 }
 
 .main-navigation {
     display: flex; 
     flex-direction: column;
-    /* центруем по cross axis */
+    /* центруем логотип по cross axis */
     align-items: center;
 
     /* Временно для сетки */
@@ -302,19 +313,14 @@ body {
     margin-bottom: 60px;
 
     background-color: #000000;
+
+    /* Временно для сетки */
+border: 2px dotted green;
 }
 
- .container {
-    /* Задамем центровку контейнера*/ 
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 10px;
-
-/* Временно для сетки */
-border: 2px dotted red;
-}
 
 .main-navigation-style .container {
+    /* Делаем флекс контейнером*/
     display: flex;
     justify-content: space-between;
 }
@@ -334,4 +340,71 @@ border: 2px dotted red;
 
 .features {
     margin-bottom: 80px;
+/* Временно для сетки */
+border: 2px dotted red;
+}
+
+.index-columns {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+    margin-bottom: 35px;
+}
+
+.news {
+    width: 380px; 
+
+    /* Временно для сетки */
+border: 2px dotted red;
+}
+
+.gallery {
+    width: 300px;
+
+    /* Временно для сетки */
+border: 2px dotted red;
+}
+
+.contact {
+    width: 380px;
+}
+
+.appointment {
+    width: 300px;
+}
+
+.main-footer {
+    padding: 60px 0;
+    margin-top: 65px;
+
+    background-color: #000000; 
+     /* Временно для сетки */
+border: 2px dotted red;
+}
+
+.main-footer .container {
+    display: flex;
+}
+
+.footer-contacts {
+    width: 320px;
+    margin: 0px; 
+    margin-right: 80px;
+    /* Временно для сетки */
+    border: 2px dotted red;
+}
+
+.footer-social {
+    width: 145px;
+         /* Временно для сетки */
+    border: 2px dotted red;
+}
+
+.footer-copyright {
+    width: 140px;
+    margin: 0;
+    margin-left: auto;
+         /* Временно для сетки */
+    border: 2px dotted red;
+
 }
