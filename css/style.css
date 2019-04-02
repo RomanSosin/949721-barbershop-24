@@ -226,13 +226,15 @@ a {
     text-decoration: none;
 }
 
-/*Стилизауем CATALOG*/
+                                        /*Стилизауем CATALOG*/
+
 
 a {
     text-decoration: none;
 }
 
-                                    /*---Сеточные Стили---*/
+
+                                      /*---Сеточные Стили---*/
 
 body {
     min-width: 1122px;
@@ -240,9 +242,7 @@ body {
 }
 
 body {
-    /*---Временно для сетки-
-    background-image: url("img/barbershop-index_1.jpg");
-    --*/
+    ackground-image: url("img/barbershop-index_1.jpg");
     background-size: 2560px auto;
     background-repeat: no-repeat;
 }
