@@ -351,6 +351,7 @@ a {
 
 
                                       /*---Сеточные Стили---*/
+                                      /* Index page */
 
 body {
     min-width: 1122px;
@@ -523,4 +524,32 @@ border: 2px dotted red;
          /* Временно для сетки */
     border: 2px dotted red;
 
+}
+
+                                                    /* Catalog page */
+
+.inner-page .main-header {
+    margin-bottom: 54px;
+
+    background-color: #000000;
+    /* Временно для сетки */
+    border: 2px dotted red;
+    
+   /* Временно для сетки */
+  min-height: 70px;
+}
+
+.inner-page .catalog-header-logo {
+    padding: 25px 20px;
+}
+
+.inner-page .main-navigation {
+    align-items: flex-start;
+    /*Задаем горизонтальное направление главной оси*/ 
+    flex-direction: row;
+    min-height: 100px;
+}
+
+.inner-page .user-navigation {
+    margin-left: auto;
 }
