@@ -534,7 +534,7 @@ border: 2px dotted red;
     background-color: #000000;
     /* Временно для сетки */
     border: 2px dotted red;
-    
+
    /* Временно для сетки */
   min-height: 70px;
 }
@@ -552,4 +552,69 @@ border: 2px dotted red;
 
 .inner-page .user-navigation {
     margin-left: auto;
+}
+
+.page-title {
+    margin: 0;
+    margin-bottom: 18px;
+    padding: 0px;
+}
+
+.breadcrumbs {
+    padding: 0px;
+    margin: 0px;
+    margin-bottom: 54px;
+}
+
+.manufactures {
+    width: 180px;
+
+    /* Временно для сетки */
+    
+}
+
+.catalog {
+    width: 700px;
+
+    /* Временно для сетки */
+ 
+}
+
+.catalog-columns {
+    /*добавляем дополнительную обертку и делаем флекс элементом*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-item {
+    width: 220px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+   
+}
+
+/*Сбрасываем отступ справа*/
+.catalog-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.catalog-roll {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.pagination-list {
+    width: 195px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.inner-page .main-footer {
+    margin-top: 50px;
 }
