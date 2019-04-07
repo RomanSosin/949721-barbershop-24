@@ -17,13 +17,13 @@ body {
 }
 
     /*Стили для body в catalog*/
-    .inner-page {
-        color: #000000;
+.inner-page {
+    color: #000000;
 
-        background-color: f8f5f2;
-        background-image: url("img/bg-light.jpg");
-        background-position: 0 0;
-        background-repeat: repeat;
+    background-color: f8f5f2;
+    background-image: url("img/bg-light.jpg");
+    background-position: 0 0;
+    background-repeat: repeat;
     }
 
     /*Описываем глобальные стили*/
