@@ -385,14 +385,12 @@ a {
                                       /* Index page */
 
 body {
-    min-width: 1122px;
+    min-width: 800px;
     min-height: 1750px;
 }
 
 body {
-    ackground-image: url("img/barbershop-index_1.jpg");
-    background-size: 2560px auto;
-    background-repeat: no-repeat;
+
 }
 .container {
     /* Задамем центровку контейнера*/ 
@@ -418,9 +416,6 @@ border: 2px dotted red;
     /* центруем логотип по cross axis */
     align-items: center;
 
-    /* Временно для сетки */
-    min-height: 285px;
-    background-color: transparent; 
 }
 
 .main-header-logo {
@@ -440,7 +435,6 @@ border: 2px dotted red;
     list-style: none;
 
     /* Временно для сетки */
-    min-height: 70px;
     border: 2px dotted red;
 }
 
@@ -451,7 +445,6 @@ border: 2px dotted red;
     list-style: none;
 
     /* Временно для сетки */
-    min-height: 70px;
     border: 2px dotted red;
 
 }
@@ -648,4 +641,13 @@ border: 2px dotted red;
 
 .inner-page .main-footer {
     margin-top: 50px;
+}
+
+                                                        /* Itempage */
+.product-gallery {
+    width: 460px;
+}
+
+.description-item {
+    width: 390px;
 }
