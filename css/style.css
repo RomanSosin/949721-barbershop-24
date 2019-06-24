@@ -289,7 +289,6 @@ a {
 
 .page-title {
     font-size: 30px;
-    ine-height: 42px;
 }
 
 .breadcrumbs {
@@ -340,11 +339,11 @@ a {
 
 .catalog-item {
     background-color: #ffffff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .catalog-item:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .catalog-item a {
