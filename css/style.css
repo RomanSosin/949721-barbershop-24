@@ -151,11 +151,19 @@ input[type="radio"].visually-hidden {
 }
 
 .gallery-content {
+    /* фиксируем высоту*/
+    height: 164px;
+    margin: 0;
+    
     background-color: #b7b7b7;
     border: 7px solid #ffffff;
 }
 
 .button {
+    display: inline-block;
+    padding: 10px 30px;
+    margin-right: 16px;
+
     /*добавляем наследование, так как кнопка не наследует стили из body*/
     font: inherit;
 
@@ -172,6 +180,13 @@ input[type="radio"].visually-hidden {
 .button:focus,
 .button:active {
     background-color: #663d15;
+}
+
+.button.disabled,
+.button:disabled {
+    cursor: default;
+    opacity: 0.5;
+    background-color: #000000;
 }
 
 .appointment-item input {
