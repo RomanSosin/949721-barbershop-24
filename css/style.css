@@ -130,6 +130,7 @@ input[type="radio"].visually-hidden {
     color: #000000;
 
     background-color: faf7f4;
+    /*Множественный фон*/
     background-image: 
     url("img/shadow.png"),
     url("img/bg-light.jpg");
@@ -140,10 +141,28 @@ input[type="radio"].visually-hidden {
 .index-columns h2 {
     font-size: 30px;
     line-height: 42px;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+    
 }
 
 .news-list {
     list-style: none;
+
+    padding: 0; 
+    margin: 0;
+    margin-bottom: 25px;
+    
+}
+
+.news-item {
+    margin-bottom: 25px;
+}
+
+.news-item p {
+    margin: 0;
 }
 
 .news-item time {
