@@ -178,6 +178,20 @@ input[type="radio"].visually-hidden {
     border: 7px solid #ffffff;
 }
 
+.gallery-content img {
+    height: 164px;
+    width: 286px; 
+}
+
+    /* Контейнер для галлереи*/
+.gallery-container {
+    position: relative;
+    margin: 0;
+    height: 260px;
+}
+
+    /* Кнопки*/
+
 .button {
     display: inline-block;
     padding: 10px 30px;
@@ -207,6 +221,14 @@ input[type="radio"].visually-hidden {
     opacity: 0.5;
     background-color: #000000;
 }
+
+.gallery-button {
+    box-sizing: border-box;
+    position: absolute;
+    width: 140px;
+    margin: 0;
+}
+
 
 .appointment-item input {
     font: inherit;
@@ -621,9 +643,6 @@ border: 2px dotted red;
 
 .gallery {
     width: 300px;
-
-    /* Временно для сетки */
-border: 2px dotted red;
 }
 
 .contact {
