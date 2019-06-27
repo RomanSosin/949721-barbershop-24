@@ -188,6 +188,8 @@ input[type="radio"].visually-hidden {
     position: relative;
     margin: 0;
     height: 260px;
+
+    border: 1px solid red;
 }
 
     /* Кнопки*/
@@ -226,7 +228,16 @@ input[type="radio"].visually-hidden {
     box-sizing: border-box;
     position: absolute;
     width: 140px;
+    bottom: 0;
     margin: 0;
+}
+
+.gallery-button-back {
+    left: 0;
+}
+
+.gallery-button-next {
+    right: 0;
 }
 
 
@@ -266,14 +277,30 @@ input[type="radio"].visually-hidden {
 
 .footer-social {
     text-align: center;
+    width: 145px;
+    /* Временно для сетки */
+border: 2px dotted red;
 }
 
 .footer-social ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     list-style: none;
+    width: 141px;
+
+    margin: 0;
+    padding: 0;
+    border: 2px dotted red;
 }
 
 .social-button {
-    color: #ffffff; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    background-color: #000000; 
 }
 
 .footer-copyright {
@@ -649,10 +676,51 @@ border: 2px dotted red;
     width: 380px;
 }
 
+.contact p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
 .appointment {
     width: 300px;
 }
 
+.appointment-info {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+}
+
+.appointment-item {
+    width: 140px;
+}
+
+.appointment-item label {
+    display: block;
+    margin-left: 15px;
+    margin-bottom: 9px;
+}
+
+.appointment-item input {
+    box-sizing: border-box;
+    width: 140px;
+    padding-top: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 7px;    
+}
+
+.appointment .button {
+    width: 100%;
+    margin: 0;
+    margin-top: 10px;
+}
 .main-footer {
     padding: 60px 0;
     margin-top: 65px;
@@ -674,11 +742,6 @@ border: 2px dotted red;
     border: 2px dotted red;
 }
 
-.footer-social {
-    width: 145px;
-         /* Временно для сетки */
-    border: 2px dotted red;
-}
 
 .footer-copyright {
     width: 140px;
