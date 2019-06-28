@@ -129,14 +129,24 @@ input[type="radio"].visually-hidden {
 .index-columns {
     color: #000000;
 
-    background-color: faf7f4;
+    background-color: #faf7f4;
     /*Множественный фон*/
     background-image: 
     url("img/shadow.png"),
     url("img/bg-light.jpg");
     background-position: center, 0 0;
     background-repeat: no-repeat, repeat;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 80px;
+    margin-bottom: 35px;
 }
+
+.index-columns:last-child {
+    margin-bottom: 0;
+}
+
 
 .index-columns h2 {
     font-size: 30px;
@@ -148,11 +158,18 @@ input[type="radio"].visually-hidden {
     
 }
 
+.news {
+    width: 380px; 
+
+    /* Временно для сетки */
+}
+
 .news-list {
     list-style: none;
 
     padding: 0; 
     margin: 0;
+    /* Отступ перед кнопкой*/
     margin-bottom: 25px;
     
 }
@@ -169,12 +186,24 @@ input[type="radio"].visually-hidden {
     text-transform: none;
 }
 
+.gallery {
+    width: 300px;
+}
+
+  /* Контейнер для галлереи*/
+.gallery-container {
+    position: relative;
+    margin: 0;
+    height: 260px;
+}
+
 .gallery-content {
-    /* фиксируем высоту*/
+    /* фиксируем высоту если вдруг фото будет не по размеру*/
     height: 164px;
     margin: 0;
     
     background-color: #b7b7b7;
+    /* Задаем рамки вокруг фото*/
     border: 7px solid #ffffff;
 }
 
@@ -183,14 +212,15 @@ input[type="radio"].visually-hidden {
     width: 286px; 
 }
 
-    /* Контейнер для галлереи*/
-.gallery-container {
-    position: relative;
-    margin: 0;
-    height: 260px;
-
-    border: 1px solid red;
+.contact {
+    width: 380px;
 }
+
+.contact p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
 
     /* Кнопки*/
 
@@ -291,7 +321,11 @@ border: 2px dotted red;
 
     margin: 0;
     padding: 0;
-    border: 2px dotted red;
+}
+
+.footer-social b {
+    display: block;
+    margin-bottom: 15px;
 }
 
 .social-button {
@@ -303,8 +337,32 @@ border: 2px dotted red;
     background-color: #000000; 
 }
 
+/* Меняем цвет фона и заливку внутри SVG элемента */
+.social-button:hover,
+.social-button:focus {
+    background-color: #ffffff;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+    fill: #000000;
+/* Можно сделать плавное 
+    transition: 1s all;
+изменение цвета*/
+}
+
 .footer-copyright {
     text-align: center;
+}
+
+.footer-copyright b {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-copyright .button {
+    display: block; 
+    margin-right: 0;
 }
 
 .footer-copyright .button:hover,
@@ -521,29 +579,22 @@ a {
                                       /* Index page */
 
 body {
-    min-width: 800px;
+    min-width: 960px;
     min-height: 1750px;
 }
 
-body {
 
-}
 .container {
     /* Задамем центровку контейнера*/ 
     width: 940px;
     margin: 0 auto;
     padding: 0 10px;
-
-/* Временно для сетки */
-border: 2px dotted red;
 }
 
 .main-header {
     margin-bottom: 75px; 
 
-    /* Временно для сетки */ 
-    min-height: 285px;
-     border: 2px dotted white 
+    border: 2px dotted white 
 }
 
 .main-navigation {
@@ -551,7 +602,6 @@ border: 2px dotted red;
     flex-direction: column;
     /* центруем логотип по cross axis */
     align-items: center;
-
 }
 
 .main-header-logo {
@@ -561,7 +611,7 @@ border: 2px dotted red;
     order: 2; 
 
     /* Временно для сетки */
-    border: 2px dotted red; 
+    border: 2px dotted blue; 
 }
 
 .site-navigation {
@@ -573,7 +623,7 @@ border: 2px dotted red;
     list-style: none;
 
     /* Временно для сетки */
-    border: 2px dotted red;
+    border: 2px dotted yellow;
 }
 
 .user-navigation {
@@ -586,6 +636,22 @@ border: 2px dotted red;
 
     /* Временно для сетки */
     border: 2px dotted red;
+}
+
+.main-navigation-style {
+    width: 100%;
+    margin-bottom: 60px;
+
+    background-color: #000000;
+
+    /* Временно для сетки */
+border: 2px dotted green;
+}
+
+.main-navigation-style .container {
+    /* Делаем флекс контейнером*/
+    display: flex;
+    justify-content: space-between;
 }
 
 .user-navigation .login-link {
@@ -613,22 +679,8 @@ border: 2px dotted red;
     opacity: 1;
 }
 
-
-.main-navigation-style {
-    width: 100%;
-    margin-bottom: 60px;
-
-    background-color: #000000;
-
-    /* Временно для сетки */
-border: 2px dotted green;
-}
-
-
-.main-navigation-style .container {
-    /* Делаем флекс контейнером*/
-    display: flex;
-    justify-content: space-between;
+.features {
+    margin-bottom: 80px;
 }
 
 .features-list {
@@ -645,41 +697,10 @@ border: 2px dotted green;
 
     text-align: center;
     /* Временно для сетки */
-border: 2px dotted green;
+    border: 2px dotted green;
 }
 
-.features {
-    margin-bottom: 80px;
-/* Временно для сетки */
-border: 2px dotted red;
-}
 
-.index-columns {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 80px;
-    margin-bottom: 35px;
-}
-
-.news {
-    width: 380px; 
-
-    /* Временно для сетки */
-border: 2px dotted red;
-}
-
-.gallery {
-    width: 300px;
-}
-
-.contact {
-    width: 380px;
-}
-
-.contact p {
-    margin: 0;
-    margin-bottom: 25px;
-}
 
 .appointment {
     width: 300px;
