@@ -1,5 +1,8 @@
 body {
+    min-width: 960px;
+    min-height: 1750px;
     margin: 0;
+    padding: 0;
 
     /* Свойства параметров шрифта*/
     font-family: "PT Sans Narrow", Arial, sans-serif; /*подбираем преобладающий шрифт на страницах*/
@@ -55,19 +58,51 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-    /*Идем по блокам*/
+
+
+
+
+.container {
+    /* Задамем центровку контейнера*/ 
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.main-header {
+    margin-bottom: 75px; 
+}
+
 .main-navigation {
+    display: flex; 
+    flex-direction: column;
+    /* центруем логотип по cross axis */
+    align-items: center;
+
     font-size: 16px;
     line-height: 20px;
     color: #ffffff;
+}
+
+.main-header-logo {
+    width: 368px;
+    height: 153px;
+    /* Переносим логотип под навигацию*/
+    order: 2; 
+
+}
+
+.main-navigation-style {
+    width: 100%;
+    margin-bottom: 60px;
 
     background-color: #000000;
 }
 
-.site-navigation,
-.user-navigation {
-    /*Убираем маркеры из списков*/
-    list-style: none;
+.main-navigation-style .container {
+    /* Делаем флекс контейнером*/
+    display: flex;
+    justify-content: space-between;
 }
 
 .site-navigation a, 
@@ -80,6 +115,24 @@ input[type="radio"].visually-hidden {
 
 }
 
+.site-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
+.user-navigation {
+    display: flex; 
+    max-width: 140px;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
+}
+
 .site-navigation a:hover,
 .site-navigation a:focus,
 .user-navigation a:hover,
@@ -87,12 +140,48 @@ input[type="radio"].visually-hidden {
     background-color: #242424
 }
 
+.user-navigation .login-link {
+    position: relative;
+    padding-left: 50px;
+}
+
+.login-link::before {
+    content: "";
+    position: absolute;
+    top: 27px;
+    left: 24px;
+    width: 16px;
+    height: 16px;
+
+    background-image: url("img/login.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    opacity: 0.3;
+}
+
+.login-link:hover::before {
+    opacity: 1;
+}
+
+
+                            /*Идем по блокам*/
+.features {
+    margin-bottom: 80px;
+}
+
 .features-list {
-    /*Убираем маркеры из списков*/
-    list-style: none; 
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
+    list-style: none;
 }
 
 .features-item {
+    width: 300px;
+
     text-align: center;
 }
 
@@ -124,6 +213,7 @@ input[type="radio"].visually-hidden {
 .features-item p {
     margin: 0 19px;
 }
+
 
     /*Оформляем общий раздел*/
 .index-columns {
@@ -221,8 +311,157 @@ input[type="radio"].visually-hidden {
     margin-bottom: 25px;
 }
 
+.appointment {
+    width: 300px;
+}
 
-    /* Кнопки*/
+.appointment-info {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
+.appointment-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.appointment-item {
+    width: 140px;
+}
+
+.appointment-item label {
+    display: block;
+    margin-left: 15px;
+    margin-bottom: 9px;
+}
+
+.appointment-item input {
+    font: inherit;
+
+    box-sizing: border-box;
+    width: 140px;
+    padding-top: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 7px;  
+    
+    background-color: transparent;
+    border: 2px solid #000000;
+}
+
+.appointment-item input:focus {
+    border-color: #663d15;
+}
+
+
+.main-footer {
+    padding: 60px 0;
+    margin-top: 65px;
+
+    color: #ffffff;
+
+    background-color: #000000;
+    background-image: url("img/bg-dark.jpg");
+    background-position: 0 0;
+    background-repeat: repeat;
+
+}
+
+.main-footer .container {
+    display: flex;
+}
+
+.footer-contacts {
+    font: inherit;
+
+    width: 320px;
+    margin: 0px; 
+    margin-right: 80px;
+}
+
+.footer-contacts a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+    text-decoration: none;
+}
+
+.footer-social {
+    text-align: center;
+    width: 145px;
+}
+
+.footer-social b {
+    display: block;
+    margin-bottom: 15px;
+} 
+
+.footer-social ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    list-style: none;
+    width: 141px;
+
+    margin: 0;
+    padding: 0;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    background-color: #000000; 
+}
+
+/* Меняем цвет фона и заливку внутри SVG элемента */
+.social-button:hover,
+.social-button:focus {
+    background-color: #ffffff;
+}
+
+.social-button:hover path,
+.social-button:focus path {
+    fill: #000000;
+/* Можно сделать плавное 
+    transition: 1s all;
+изменение цвета*/
+}
+
+
+.footer-copyright {
+    text-align: center;
+    
+    width: 150px;
+    margin: 0;
+    margin-left: auto;
+}
+
+.footer-copyright b {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.footer-copyright .button {
+    display: block; 
+    margin-right: 0;
+}
+
+.footer-copyright .button:hover,
+.footer-copyright .button:focus {
+    color: #000000;
+    
+    background-color: #ffffff
+}
+
+
+                                                        /* Кнопки*/
 
 .button {
     display: inline-block;
@@ -270,110 +509,18 @@ input[type="radio"].visually-hidden {
     right: 0;
 }
 
-
-.appointment-item input {
-    font: inherit;
-
-    background-color: transparent;
-    border: 2px solid #000000;
-}
-
-.appointment-item input:focus {
-    border-color: #663d15;
-}
-
-.main-footer {
-    color: #ffffff;
-
-    background-color: #000000;
-    background-image: url("img/bg-dark.jpg");
-    background-position: 0 0;
-    background-repeat: repeat;
-}
-
-.footer-contacts{
-    font: inherit;
-}
-
-.footer-contacts a {
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-.footer-contacts a:hover,
-.footer-contacts a:focus {
-    text-decoration: none;
-}
-
-.footer-social {
-    text-align: center;
-    width: 145px;
-    /* Временно для сетки */
-border: 2px dotted red;
-}
-
-.footer-social ul {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    list-style: none;
-    width: 141px;
-
+.appointment .button {
+    width: 100%;
     margin: 0;
-    padding: 0;
-}
-
-.footer-social b {
-    display: block;
-    margin-bottom: 15px;
-}
-
-.social-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 43px;
-    height: 43px;
-    background-color: #000000; 
-}
-
-/* Меняем цвет фона и заливку внутри SVG элемента */
-.social-button:hover,
-.social-button:focus {
-    background-color: #ffffff;
-}
-
-.social-button:hover path,
-.social-button:focus path {
-    fill: #000000;
-/* Можно сделать плавное 
-    transition: 1s all;
-изменение цвета*/
-}
-
-.footer-copyright {
-    text-align: center;
-}
-
-.footer-copyright b {
-    display: block;
-    margin-bottom: 15px;
-}
-
-.footer-copyright .button {
-    display: block; 
-    margin-right: 0;
-}
-
-.footer-copyright .button:hover,
-.footer-copyright .button:focus {
-    color: #000000;
-    
-    background-color: #ffffff
+    margin-top: 10px;
 }
 
 
-    /*Стилизация поля "login"*/
+
+
+
+
+                                        /*Стилизация поля "login"*/
 .modal-login {
     color: #000000;
 
@@ -421,19 +568,84 @@ border: 2px dotted red;
     text-decoration: none;
 }
 
-                                        /*Стилизауем CATALOG*/
 
 
-a {
-    text-decoration: none;
+
+
+
+
+
+                                        /*CATALOG*/
+
+.inner-page .main-header {
+    margin-bottom: 50px;
+
+    background-color: #000000;
+    /* Временно для сетки */
+    border: 2px dotted red;
+}
+
+.inner-page .catalog-header-logo {
+    width: 111px;
+    height: 24px;
+    padding: 23px 20px;
+}
+
+.inner-page .main-navigation {
+    align-items: flex-start;
+    /*Задаем горизонтальное направление главной оси*/ 
+    flex-direction: row;
+}
+
+.inner-page .user-navigation {
+    margin-left: auto;
 }
 
 .page-title {
     font-size: 30px;
+
+    margin: 0;
+    margin-bottom: 18px;
+    padding: 0;
 }
 
 .breadcrumbs {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    padding: 0;
+    margin: 0;
+    margin-bottom: 50px;
+
     list-style: none;
+    
+}
+
+.breadcrumbs li {
+    position: relative;
+    margin-right: 42px;
+}
+
+.breadcrumbs li:last-child {
+    margin-right: 0;
+}
+
+.breadcrumbs li::after {
+    content:"";
+    position: absolute;
+    top: 7px;
+    right: -25px;
+    transform: rotate(45deg);
+
+    width: 8px;
+    height: 8px;
+
+    background-color: #000000;
+}
+
+.breadcrumbs-current::after {
+    display: none;
 }
 
 .breadcrumbs a {
@@ -449,18 +661,51 @@ a {
     color: #aba9a7;
 }
 
+.filter {
+    width: 180px;
+}
+
 .filter fieldset {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 30px;
+
     border: none;
 }
 
+.filter fieldset:first-child {
+    margin-bottom: 35px;
+}
+
 .filter legend {
+    margin-bottom: 30px;
     font-size: 24px;
     line-height: 30px;
 }
 
 .filter ul {
+    margin: 0;
+    padding: 0;
+
     list-style: none;
     line-height: 18px;
+}
+
+.filter-option {
+    margin-bottom: 19px;
+    /* Задаем отступ для чекбксов */
+    padding-left: 45px;
+}
+
+/* Делаем label блочным, задаём относительное позиционирование. 
+Задаём курсор с указателем и отменяем выделение текста подписи цветом*/
+.filter-option label {
+    position: relative;
+    display: block;
+
+    cursor: pointer;
+    user-select: none;
+
 }
 
 .filter-input:hover + label,
@@ -474,13 +719,91 @@ a {
     opacity: 0.5; 
 }
 
+/* Добавим стилизованные чекбоксы для полей выбора с типом checkbox.*/
+.filter-input-checkbox + label::before {
+    content: "";
+    position: absolute;
+    left: -42px;
+    top: 0;
+
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #000000;
+}
+
+/*Теперь добавляем иконку, которая показывает, что поле выбрано. 
+Добавляем ещё один псевдоэлемент, задаём ему высоту, ширину и временный фон.*/
+.filter-input-checkbox:checked + label::after {
+    content: "";
+    position: absolute;
+    left: -38px;
+    top: 4px;
+    
+    width: 12px;
+    height: 12px;
+
+    background-image: url("img/cross.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+.filter-input-radio + label::before {
+    content: "";
+    position: absolute; 
+    left: -42px;
+    top: -1px;
+
+    width: 16px;
+    height: 16px;
+
+    border: 2px solid #000000;
+    border-radius: 50%;
+}
+
+.filter-input-radio:checked +label::after {
+    content: "";
+    position: absolute;
+    left: -36px;
+    top: 5px;
+
+    width: 8px;
+    height: 8px;
+    background-color: #000000;
+    border-radius: 50%;
+    
+}
+
+.catalog {
+    width: 700px;
+}
+
+.catalog-columns {
+    /*добавляем дополнительную обертку и делаем флекс элементом*/
+    display: flex;
+    justify-content: space-between;
+
+    border: 2px solid green;
+}
+
 .catalog-roll {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 25px;
+
     list-style: none;
 }
 
 .catalog-item {
+    width: 220px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+
     background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
 }
 
 .catalog-item:hover {
@@ -496,10 +819,6 @@ a {
     line-height: 18px;
 }
 
-.catalog-category {
-    text-transform: none;
-}
-
 .catalog-item-price b {
     font-size: 14px;
     line-height: 18px;
@@ -510,6 +829,28 @@ a {
 
 .catalog-item-price .button {
     color: #ffffff;
+}
+
+/*Сбрасываем отступ справа*/
+.catalog-item:nth-child(3n) {
+    margin-right: 0;
+}
+
+.catalog-category {
+    text-transform: none;
+}
+
+.pagination-list {
+    width: 195px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.inner-page .main-footer {
+    margin-top: 50px;
 }
 
 .pagination-list {
@@ -542,7 +883,13 @@ a {
     background-color: #ffffff;
 }
 
-                                    /*Стилизауем ITEM*/
+
+
+
+
+
+
+                                    /*Item*/
 .product-gallery-preview {
     list-style: none;
 }
@@ -575,296 +922,8 @@ a {
 .description-item ul {
     list-style: none;
 }
-                                      /*---Сеточные Стили---*/
-                                      /* Index page */
-
-body {
-    min-width: 960px;
-    min-height: 1750px;
-}
 
 
-.container {
-    /* Задамем центровку контейнера*/ 
-    width: 940px;
-    margin: 0 auto;
-    padding: 0 10px;
-}
-
-.main-header {
-    margin-bottom: 75px; 
-
-    border: 2px dotted white 
-}
-
-.main-navigation {
-    display: flex; 
-    flex-direction: column;
-    /* центруем логотип по cross axis */
-    align-items: center;
-}
-
-.main-header-logo {
-    width: 368px;
-    height: 153px;
-    /* Переносим логотип под навигацию*/
-    order: 2; 
-
-    /* Временно для сетки */
-    border: 2px dotted blue; 
-}
-
-.site-navigation {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-
-    /* Временно для сетки */
-    border: 2px dotted yellow;
-}
-
-.user-navigation {
-    display: flex; 
-    max-width: 140px;
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-
-    /* Временно для сетки */
-    border: 2px dotted red;
-}
-
-.main-navigation-style {
-    width: 100%;
-    margin-bottom: 60px;
-
-    background-color: #000000;
-
-    /* Временно для сетки */
-border: 2px dotted green;
-}
-
-.main-navigation-style .container {
-    /* Делаем флекс контейнером*/
-    display: flex;
-    justify-content: space-between;
-}
-
-.user-navigation .login-link {
-    position: relative;
-    padding-left: 50px;
-
-}
-
-.login-link::before {
-    content: "";
-    position: absolute;
-    top: 27px;
-    left: 24px;
-    width: 16px;
-    height: 16px;
-
-    background-image: url("img/login.svg");
-    background-repeat: no-repeat;
-    background-position: 0 0;
-
-    opacity: 0.3;
-}
-
-.login-link:hover::before {
-    opacity: 1;
-}
-
-.features {
-    margin-bottom: 80px;
-}
-
-.features-list {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-
-    list-style: none;
-}
-
-.features-item {
-    width: 300px;
-
-    text-align: center;
-    /* Временно для сетки */
-    border: 2px dotted green;
-}
-
-
-
-.appointment {
-    width: 300px;
-}
-
-.appointment-info {
-    margin: 0;
-    margin-bottom: 15px;
-}
-
-.appointment-form {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    
-}
-
-.appointment-item {
-    width: 140px;
-}
-
-.appointment-item label {
-    display: block;
-    margin-left: 15px;
-    margin-bottom: 9px;
-}
-
-.appointment-item input {
-    box-sizing: border-box;
-    width: 140px;
-    padding-top: 8px;
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-bottom: 7px;    
-}
-
-.appointment .button {
-    width: 100%;
-    margin: 0;
-    margin-top: 10px;
-}
-.main-footer {
-    padding: 60px 0;
-    margin-top: 65px;
-
-    background-color: #000000; 
-     /* Временно для сетки */
-border: 2px dotted red;
-}
-
-.main-footer .container {
-    display: flex;
-}
-
-.footer-contacts {
-    width: 320px;
-    margin: 0px; 
-    margin-right: 80px;
-    /* Временно для сетки */
-    border: 2px dotted red;
-}
-
-
-.footer-copyright {
-    width: 140px;
-    margin: 0;
-    margin-left: auto;
-         /* Временно для сетки */
-    border: 2px dotted red;
-
-}
-
-                                                    /* Catalog page */
-
-.inner-page .main-header {
-    margin-bottom: 54px;
-
-    background-color: #000000;
-    /* Временно для сетки */
-    border: 2px dotted red;
-
-   /* Временно для сетки */
-  min-height: 70px;
-}
-
-.inner-page .catalog-header-logo {
-    padding: 25px 20px;
-}
-
-.inner-page .main-navigation {
-    align-items: flex-start;
-    /*Задаем горизонтальное направление главной оси*/ 
-    flex-direction: row;
-    min-height: 100px;
-}
-
-.inner-page .user-navigation {
-    margin-left: auto;
-}
-
-.page-title {
-    margin: 0;
-    margin-bottom: 18px;
-    padding: 0px;
-}
-
-.breadcrumbs {
-    padding: 0px;
-    margin: 0px;
-    margin-bottom: 54px;
-}
-
-.manufactures {
-    width: 180px;
-
-    /* Временно для сетки */
-    
-}
-
-.catalog {
-    width: 700px;
-
-    /* Временно для сетки */
- 
-}
-
-.catalog-columns {
-    /*добавляем дополнительную обертку и делаем флекс элементом*/
-    display: flex;
-    justify-content: space-between;
-}
-
-.catalog-item {
-    width: 220px;
-    margin-bottom: 20px;
-    margin-right: 20px;
-   
-}
-
-/*Сбрасываем отступ справа*/
-.catalog-item:nth-child(3n) {
-    margin-right: 0;
-}
-
-.catalog-roll {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
-    margin-bottom: 25px;
-}
-
-.pagination-list {
-    width: 195px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-}
-
-.inner-page .main-footer {
-    margin-top: 50px;
-}
 
                                                         /* Itempage */
 .product-gallery {
